@@ -352,12 +352,134 @@ li > a:hover {
 
 #projects{
     height: 100vh;
+    background-image: url(/images/nature-2.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
 
+}
+
+#projects::before { /* overlay preto com 50% de opacidade */
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-color: rgba(0, 0, 0, 0.781); 
+  z-index: 1; 
+}
+
+/* visibilidade do texto sobre o overlay */
+#projects > * {
+  position: relative;
+  z-index: 2;
 }
 
 .container-projects{
-    height: 100vh;
+    height: 80vh;
+    margin: 20vh 0 0 0;
 }
+
+.container-projects > h1{
+  font-size: 3rem;
+
+}
+
+.container-projects > h1 > span{
+  color: #999D32;
+  font-weight: bold;
+
+}
+
+.container-projects > p{
+  margin: 2vh 0 10vh 0;
+  font-size: 1.3rem;
+  width: 50vw;
+
+}
+
+
+
+
+/* ----------------------- DISPLAY DOS PROJETOS ---------------------*/
+
+:root {
+	--color-core-primary: #999D32;
+	--color-core-tertiary: #57581f;
+	--color-core-bg: #fff;
+	
+	--color-avatars-background: #f8f9fa;
+}
+
+.avatars {
+	--gap: 0.1em;
+	--avatar-size: 30em;
+	--overlap-size: 15em;
+	--hover-overlap-size: 10em; /* Best to keep lower than --avatar-size so that there is still some overlap on hover */
+	--border-size: 0.2em;
+	--num-children: 4; 
+	--num-children-1: calc(var(--num-children) - 1);
+
+	background: var(--color-avatars-background);
+	
+	
+	display: grid;
+	gap: var(--gap);
+	margin: 0 auto;
+  height: 25vh;
+	
+	
+	grid-auto-flow: column;
+	grid-template-columns: repeat(var(--num-children), var(--grid-cell-size-to-use));
+/* 	grid-auto-columns: var(--grid-cell-size-to-use); */
+	width: 50vw;
+	transition: all ease-in-out 0.25s;
+
+	border: calc(var(--border-size) / 2) solid rgb(0 0 0 / 0.3);
+}
+
+.avatars {
+	--grid-cell-size-to-use: var(--overlap-size);
+}
+
+.avatars > a > img{
+  width: 100px;
+}
+
+
+
+
+.avatars > * {
+	width: var(--avatar-size);
+	aspect-ratio: 1;
+	height: auto;
+	
+	
+	outline: none;
+}
+
+.avatars img {
+	width: 100%;
+	height: auto;
+	
+	--border-color: var(--color-core-primary);
+	outline: var(--border-size) solid var(--border-color);
+	outline-offset: calc(var(--border-size) * -2 + 1px); /* 1px extra to cater for rounding errors */
+	
+	border: var(--border-size) solid var(--color-avatars-background);
+	
+	
+	transition: all ease-in-out 0.15s;
+}
+
+.avatars :is(:hover, :focus) > img {
+	--border-color: var(--color-core-tertiary);
+	scale: 1.1;
+}
+
 
 
 

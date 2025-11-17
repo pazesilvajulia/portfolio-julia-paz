@@ -56,3 +56,4 @@ const swiper = new Swiper('.blog-slider', {
     clickable: true,
   },
 });
+
