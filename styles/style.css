@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html{
+    font-family: "Inter", sans-serif;
+}
+
+
+
+header {
+  margin-top: 2.5rem;
+  height: 9vh;
+  width: 60vw;
+  position: fixed;
+  left: 20%;
+  border-radius: 50px;
+  z-index: 10;
+
+  background: rgba(23, 23, 23, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 0 2rem;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* ← Centraliza verticalmente */
+  height: 100%; /* garante que use toda a altura do header */
+}
+
+/* ====== LOGO ====== */
+.logoPaz {
+  height: 5vh;
+  width: auto;
+  cursor: pointer;
+}
+
+/* ====== MENU ====== */
+#nav-menu {
+  font-size: 1.1rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  gap: 6.5vw;
+  align-items: center;
+  list-style: none;
+}
+
+li > a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+li > a:hover {
+  padding: 2vh 2vw;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+/* ====== HAMBURGER ICON (hidden by default) ====== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+
+#main-section{
+    height: 100vh;
+    background-image: url('/images/mountain-nature-lake-landscape-scenery-8K-152.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+
+}
+
+
+#main-section::before { /* overlay preto com 50% de opacidade */
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
+}
+
+/* visibilidade do texto sobre o overlay */
+#main-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.itemsheadline-container{
+    margin: 17vh 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+
+}
+
+.itemsheadline-container > h1{
+    font-size: 6rem;
+
+}
+
+.extrainfo-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 13vh;
+}
+
+.description-container{
+    width: 25vw;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    text-align: left;
+    margin: 0 0 0 2vw;
+}
+
+
+.description-container > img{
+    max-width: 6%;
+}
+
+
+.hello-container{
+    background-color: rgba(255, 255, 255, 0.164); 
+    height: 4vh;
+    width: 13vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.profilepic-container > img {
+  border-radius: 80%;
+  max-width: 9vh;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(255, 255, 255, 0.1);
+  transform: scale(1); /* tamanho normal */
+  transition: all 0.3s ease; /* transição suave */
+}
+
+.profilepic-container > img:hover {
+  transform: scale(1.05); /* aumenta */
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.years-container{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: end;
+    margin: 0 2vw 0 0;
+
+}
+
+.years-container > img {
+    max-width: 40%;
+}
+
+.years-container > h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.years-container > p {
+    font-size: 1.1rem;
+    
+}
+
+#aboutme{
+    background-color: #fff;
+ 
+}
+
+.container-about{
+    padding-top: 17vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container-left{
+    width: 25vw;
+    margin: 0 0 15vh 20vw;
+
+}
+
+.container-left > h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #344054;
+}
+
+.container-left > p {
+    font-size: 1.2rem;
+    margin: 3vh 0 0 0;
+    color: #7f8592;
+}
+
+.container-right{
+    width: 30vw;
+    height: 50vh;
+    margin: 0 20vw 25vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-degrees{
+    width: 25vw;
+    height: 35vh;
+    border: 1.5px #000000 solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    text-align: center;
+    margin: 3vh 0 0 0;
+    color: #7f8592;
+
+}
+
+.container-degrees > h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 2vh 1vw 0 1vw;
+    color: #344054;
+    
+}
+
+.container-degree{
+    margin: 2vh 1vw 1.5vh 1vw;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.container-desc{
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 0.5vw;
+        width: 100%;
+
+}
+
+.degree-title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.degree-title-container > h4{
+    font-weight: bold;
+    margin: 0 0 0.5vh 0;
+    color: #344054;
+
+}
+
+
+
+.circuit-wrapper {
+  min-height: 50%;
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+
+.circuit-background {
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 19px,
+      rgba(75, 85, 99, 0.034) 19px,
+      rgba(75, 85, 99, 0.034) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(75, 85, 99, 0.034) 39px,
+      rgba(75, 85, 99, 0.034) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 19px,
+      rgba(75, 85, 99, 0.034) 19px,
+      rgba(75, 85, 99, 0.034) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(75, 85, 99, 0.034) 39px,
+      rgba(75, 85, 99, 0.034) 40px
+    ),
+    radial-gradient(
+      circle at 20px 20px,
+      rgba(55, 65, 81, 0.048) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 40px 40px,
+      rgba(55, 65, 81, 0.048) 2px,
+      transparent 2px
+    );
+  background-size:
+    40px 40px,
+    40px 40px,
+    40px 40px,
+    40px 40px;
+}
+
+
+#projects{
+    height: 100vh;
+
+}
+
+.container-projects{
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
