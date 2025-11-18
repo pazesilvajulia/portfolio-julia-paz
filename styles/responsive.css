@@ -1,275 +1,210 @@
-/* =======  MOBILE FIRST RESET ======= */
-* {
-  box-sizing: border-box;
-  max-width: 100%;
+/* ===================================================
+   responsive.css — Media Queries (mobile-first)
+   Breakpoints exactly as requested (no tablet rules)
+   - Phones small:    up to 390px
+   - Phones medium:   391px — 430px
+   - Phones large:    431px — 600px
+   - Desktops small:  769px — 1024px
+   - Desktops medium: 1025px — 1440px
+   - Desktops large:  1441px — 1920px+
+   =================================================== */
+
+/* ---------------------------
+   PHONES: SMALL — up to 390px
+   --------------------------- */
+@media (max-width: 390px) {
+
+  /* header */
+  header{
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92vw;
+    height: 7.5vh;
+    top: 1.5rem;
+    border-radius: 18px;
+    padding: 0 .8rem;
+  }
+  .logoPaz{ height:4.2vh; }
+
+  /* nav */
+  #nav-menu{ gap:2.5vw; font-size:.85rem; display:none; } /* hidden by hamburger */
+  .hamburger{ display:flex; }
+
+  /* hero */
+  .itemsheadline-container{ margin-top:8vh; padding:0 .6rem; }
+  .itemsheadline-container > h1{ font-size: 1.6rem; }
+  .hello-container{ font-size:.85rem; padding:.45rem .8rem; }
+
+  .extrainfo-container{ gap:1rem; flex-direction:column; align-items:center; text-align:center; }
+  .description-container, .years-container{ text-align:center; max-width:95%; }
+  .description-container{ font-size:.95rem; }
+  .years-container h3{ font-size:1.4rem; }
+
+  /* about me */
+  .container-about{ flex-direction:column; padding-top: 8vh; gap:1.5rem; }
+  .container-left{ width:100%; margin:0; padding:0 1rem; }
+  .container-left > h1{ font-size:2rem; }
+  .container-right{ width:100%; margin:0; padding:0 1rem; }
+
+  /* projects */
+  .container-projects > p{ width:92vw; font-size:.85rem; margin-bottom:4vh; }
+  .avatars{ width:92vw; padding:1rem; gap:.8rem; }
+  .avatars > a > img{ width:42vw; max-width:120px; }
+
+  /* small tweaks */
+  .container-degrees{ width:95%; height:auto; border-radius:14px; padding:.8rem; }
 }
 
-/* =======  GERAL ======= */
-body, html {
-  overflow-x: hidden;
+/* ---------------------------
+   PHONES: MEDIUM — 391px — 430px
+   --------------------------- */
+@media (min-width:391px) and (max-width:430px) {
+
+  header{ width:90vw; height:8vh; top:1.8rem; padding:0 1rem; border-radius:20px; }
+  .logoPaz{ height:4.5vh; }
+  #nav-menu{ display:none; } .hamburger{ display:flex; }
+
+  .itemsheadline-container > h1{ font-size:1.9rem; }
+  .hello-container{ font-size:.95rem; }
+
+  .extrainfo-container{ flex-direction:column; align-items:center; text-align:center; gap:1.2rem; }
+  .description-container, .years-container{ max-width:90%; text-align:center; }
+
+  .container-projects > h1{ font-size:1.9rem; }
+  .container-projects > p{ width:90vw; font-size:.95rem; margin-bottom:2vh; }
+  .avatars{ width:100vw; padding:1rem; flex-direction:column; gap:1rem; align-items:center; }
+  .avatars > a > img{ width:80vw; max-width:300px; border-radius:10px; }
+
+  .container-left > h1{ font-size:2.4rem; }
+  .container-left > p{ font-size:1.05rem; }
 }
 
+/* ---------------------------
+   PHONES: LARGE — 431px — 600px
+   --------------------------- */
+@media (min-width:431px) and (max-width:600px) {
 
-/* ========================================= */
-/* TABLET */
-/* ========================================= */
-@media (max-width: 1024px) {
+  header{ width:80vw; height:8.5vh; top:2rem; left:50%; transform:translateX(-50%); }
+  .logoPaz{ height:4.8vh; }
 
-  header {
-    width: 80vw;
-    left: 10%;
-    height: 8vh;
-  }
+  #nav-menu{ display:none; } .hamburger{ display:flex; }
 
-  ul {
-    gap: 4vw;
-    font-size: 1rem;
-  }
+  .itemsheadline-container > h1{ font-size:2.1rem; }
+  .extrainfo-container{ gap:1.5rem; flex-direction:row; justify-content:center; align-items:center; }
+  .description-container{ text-align:left; max-width:45%; }
+  .years-container{ text-align:right; max-width:30%; }
 
-  .itemsheadline-container {
-    margin-top: 10vh !important;
-  }
+  .container-projects > p{ width:88vw; font-size:1.05rem; }
+  .avatars{ width:88vw; padding:1.6rem; gap:1rem; }
+  .avatars > a > img{ width:32vw; max-width:150px; }
 
-  
+  /* navbar fallback: show hamburger and allow spacing */
 }
 
+/* ---------------------------
+   DESKTOPS SMALL — 769px — 1024px
+   --------------------------- */
+@media (min-width:769px) and (max-width:1024px) {
 
+  /* header: use a bit wider but keep centered */
+  header{ width: 70vw; left:50%; transform:translateX(-50%); top:2.2rem; height:8.5vh; border-radius:28px; padding:0 1rem; }
+  .logoPaz{ height:4.8vh; }
 
-/* ========================================= */
-/* MOBILE GRANDE — até 768px */
-/* ========================================= */
-@media (max-width: 768px) {
+  /* show nav list if space allows */
+  #nav-menu{ display:flex; gap:4vw; font-size:1rem; }
 
-  header {
-    width: 90vw;
-    left: 5%;
-    height: 8vh;
-  }
+  /* hero */
+  .itemsheadline-container{ max-width:700px; margin-top:9vh; }
+  .itemsheadline-container > h1{ font-size: clamp(2.2rem, 3.2vw, 3.2rem); }
 
-  ul {
-    gap: 3vw;
-    font-size: 0.95rem;
-  }
+  .extrainfo-container{ justify-content:center; text-align:center; gap:2rem; }
+  .description-container, .years-container{ text-align:center; max-width:45%; }
 
-  .logoPaz {
-    height: 4vh;
-  }
+  /* about me becomes more vertical-friendly */
+  .container-about{ flex-direction:column; align-items:center; gap:2.5rem; padding-top:12vh; }
+  .container-left, .container-right{ width:80%; margin:0; text-align:center; }
 
-  #aboutme {
-    height: auto;
-    padding: 10vh 0;
-  }
-
-
+  /* projects */
+  .container-projects > p{ width:80vw; }
+  .avatars{ width:80vw; gap:1rem; }
+  .avatars > a > img{ width:22vw; max-width:160px; }
 }
 
-/* ========================================= */
-/* MOBILE PEQUENO — até 480px */
-/* ========================================= */
-@media (max-width: 480px) {
+/* ---------------------------
+   DESKTOPS MEDIUM — 1025px — 1440px
+   --------------------------- */
+@media (min-width:1025px) and (max-width:1440px) {
 
+  header{ width:60vw; top:2.5rem; height:9vh; }
+  #nav-menu{ gap:5.5vw; font-size:1.02rem; display:flex; }
 
-  ul {
-    gap: 2vw;
-    font-size: 0.85rem;
-  }
+  .itemsheadline-container{ max-width:820px; margin-top:10vh; }
+  .itemsheadline-container > h1{ font-size: clamp(2.6rem, 2.6vw + .8rem, 3.4rem); }
 
-  li > a:hover {
-    padding: 1.5vh 3vw;
-  }
+  .extrainfo-container{ gap:3.5rem; justify-content:space-between; }
+  .description-container{ max-width:360px; text-align:left; }
+  .years-container{ max-width:240px; text-align:right; }
 
-  .itemsheadline-container > h1{
-    font-size: 2rem !important;
-  }
+  .container-about{ display:flex; flex-direction:row; justify-content:space-between; align-items:center; padding-top:17vh; }
+  .container-left{ width:28vw; margin-left:18vw; }
+  .container-right{ width:30vw; margin-right:18vw; }
 
-  .description-container > p{
-    font-size: 1rem !important;
-    width: 100% !important;
-  }
+  .container-degrees{ width:25vw; height:35vh; }
+  .container-left > h1{ font-size:3rem; }
 
-  .extrainfo-container{
-    margin: 0;
-  }
-  
-
-
-
-
-
-.container-left > h1{
-    font-size: 3.5rem;
+  .container-projects > p{ width:60vw; }
+  .avatars{ width:60vw; }
+  .avatars > a > img{ width:15vw; max-width:160px; }
 }
 
-.container-left > p {
-    font-size: 1.1rem;
-}
+/* ---------------------------
+   DESKTOPS LARGE — 1441px — 1920px+
+   --------------------------- */
+@media (min-width:1441px) {
 
-.container-right > img{
-  max-width: 40% !important;
-  border-radius: 50% !important;
-}
-
-.container-right{
-    width: 100%;
-
-}
-.container-degrees{
-    width: 150vw !important;
-    
-
-}
-
-}
-
-/* ========================================= */
-/* EXTRA: evita scroll horizontal indevido */
-/* ========================================= */
-@media (max-width: 1400px) {
-  body {
-    overflow-x: hidden !important;
+  header{ 
+    width: 60vw; 
+    top:2.5rem; 
+    left:50%; 
+    transform:translateX(-50%); 
+    height:9.2vh; 
   }
 
-  .extrainfo-container {
-    width: 100%;
-  }
-}
-
-/* ====== RESPONSIVE NAVBAR ====== */
-@media (max-width: 768px) {
-  header {
-    width: 90vw;
-    left: 5%;
-    justify-content: space-between;
-    padding: 0 1.5rem;
+  #nav-menu{ 
+    gap:6.5vw; 
+    font-size:1.05rem; 
+    display:flex; 
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* Mostra o hamburger */
-  .hamburger {
-    display: flex;
+  .itemsheadline-container{ 
+    max-width:960px; 
+    margin-top:12vh; 
   }
 
-  /* Oculta o menu inicialmente */
-  #nav-menu {
-    position: absolute;
-    top: 9vh;
-    right: 5%;
-    background: rgba(23, 23, 23, 0.9);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    flex-direction: column;
-    align-items: center;
-    width: 60vw;
-    padding: 1rem 0;
-    gap: 1rem;
-    display: none;
+  .itemsheadline-container > h1{ 
+    font-size: clamp(3rem, 2.4vw + 1rem, 3.8rem); 
   }
 
-  /* Menu visível ao clicar */
-  #nav-menu.active {
-    display: flex;
-    animation: fadeIn 0.4s ease;
+  .container-left{ 
+    width:25vw; 
+    margin-left:20vw; 
   }
 
-  /* Animação suave */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .container-right{ 
+    width:30vw; 
+    margin-right:20vw; 
   }
 
-  /* Ajuste de links */
-  li > a {
-    color: white;
-    padding: 0.7rem 1rem;
-    border-radius: 10px;
+  .container-projects > p{ 
+    width:50vw; 
+    font-size:1.3rem; 
   }
 
-  li > a:hover {
-    background-color: white;
-    color: black;
+  .avatars{ 
+    width:60vw; 
+  }
+
+  .avatars > a > img{ 
+    width:15vw; 
   }
 }
-
-
-/* ========================================= */
-/* NOTEBOOKS PEQUENOS (13"–15") */
-/* ========================================= */
-@media (max-width: 1250px) {
-
-  /* HERO SECTION */
-  .itemsheadline-container > h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-  }
-
-  .extrainfo-container {
-    gap: 5vh;
-    padding: 0 5vw;
-  }
-
-  .description-container {
-    width: 50vw;
-    font-size: 1.2rem;
-    margin-left: 0;
-  }
-
-  .years-container {
-    margin-right: 0;
-  }
-
-  /* ABOUT ME */
-  .container-about {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    padding: 10vh 0;
-  }
-
-  .container-left,
-  .container-right {
-    width: 80%;
-    margin: 0;
-    text-align: center;
-  }
-
-  .container-left > h1 {
-    font-size: 2.5rem;
-  }
-
-  .container-right {
-    margin-top: 5vh;
-  }
-
-  .container-degrees {
-    width: 80%;
-    height: auto;
-  }
-
-}
-
-
-
-
-
