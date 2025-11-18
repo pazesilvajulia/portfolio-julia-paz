@@ -26,22 +26,8 @@ body, html {
     font-size: 1rem;
   }
 
-  .itemsheadline-container > h1 {
-    font-size: 4rem;
-  }
-
-  .description-container {
-    width: 40vw;
-    font-size: 1.1rem;
-    margin-left: 4vw;
-  }
-
-  .years-container {
-    margin-right: 4vw;
-  }
-
-  .hello-container {
-    width: 25vw;
+  .itemsheadline-container {
+    margin-top: 10vh !important;
   }
 
   
@@ -69,56 +55,6 @@ body, html {
     height: 4vh;
   }
 
-  .itemsheadline-container {
-    margin-top: 22vh;
-    gap: 2vh;
-  }
-
-  .itemsheadline-container > h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
-    padding: 0 5vw;
-  }
-
-  .hello-container {
-    width: 45vw;
-    height: 5vh;
-    font-size: 1.3rem;
-  }
-
-  .profilepic-container > img {
-    max-width: 12vh;
-  }
-
-  .extrainfo-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4vh;
-    margin-top: 3vh;
-  }
-
-  .description-container {
-    width: 80%;
-    text-align: center;
-    margin: 0;
-    font-size: 1.1rem;
-  }
-
-  .description-container > img {
-    display: none;
-  }
-
-  .years-container {
-    align-items: center;
-    text-align: center;
-    margin: 0;
-  }
-
-  .years-container > img {
-    max-width: 30%;
-  }
-
   #aboutme {
     height: auto;
     padding: 10vh 0;
@@ -132,70 +68,31 @@ body, html {
 /* ========================================= */
 @media (max-width: 480px) {
 
-  header {
-    width: 95vw;
-    left: 2.5%;
-    margin-top: 1rem;
-    height: 7vh;
-  }
 
   ul {
     gap: 2vw;
     font-size: 0.85rem;
   }
 
-  .itemsheadline-container {
-    margin-top: 12vh;
-  }
-
-  .itemsheadline-container > h1 {
-    margin: 0 1rem 0 1rem;
-    font-size: 3rem !important;
-    padding: 0;
-  }
-
-
-  .hello-container {
-    width: 60vw;
-    font-size: 0.9rem;
-    padding: 1vh;
-    height: 4.5vh;
-  }
-
-  .profilepic-container > img {
-    max-width: 11vh;
-  }
-
-  .extrainfo-container{
-    margin: 1rem 0 0 0;
-  }
-
-  .description-container {
-    width: 100% !important;
-    font-size: 0.9rem !important;
-    margin: 0 0 2rem 0;
-  }
-
-  .years-container > h3 {
-    margin-top: 1vh;
-    font-size: 1.8rem !important;
-  }
-
-  .years-container > p {
-    font-size: 1rem;
-  }
-
   li > a:hover {
     padding: 1.5vh 3vw;
   }
 
+  .itemsheadline-container > h1{
+    font-size: 2rem !important;
+  }
+
+  .description-container > p{
+    font-size: 1rem !important;
+    width: 100% !important;
+  }
+
+  .extrainfo-container{
+    margin: 0;
+  }
   
 
 
-.container-about{
-    padding-top: 1rem !important;
-
-}
 
 
 

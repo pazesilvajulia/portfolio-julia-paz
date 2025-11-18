@@ -82,125 +82,155 @@ li > a:hover {
 }
 
 
-#main-section{
-    height: 100vh;
-    background-image: url('/images/mountain-nature-lake-landscape-scenery-8K-152.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    position: relative;
+/* ============================= */
+/*            HERO               */
+/* ============================= */
 
+#main-section {
+  min-height: 100vh;
+  background-image: url('/images/mountain-nature-lake-landscape-scenery-8K-152.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  color: white;
 }
 
-
-#main-section::before { /* overlay preto com 50% de opacidade */
+#main-section::before {
   content: "";
   position: absolute;
-  inset: 0; 
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 1; 
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
-/* visibilidade do texto sobre o overlay */
-#main-section > * {
+.itemsheadline-container {
   position: relative;
   z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 10vh 0 0 0;
 }
 
-.itemsheadline-container{
-    margin: 17vh 0 0 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5vh;
-
+/* FOTO */
+.profilepic-container img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
 }
 
-.itemsheadline-container > h1{
-    font-size: 6rem;
-
+.profilepic-container img:hover {
+  transform: scale(1.05);
 }
 
-.extrainfo-container{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 13vh;
+/* SAUDAÇÃO */
+.hello-container {
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: rgba(255,255,255,0.15);
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
 }
 
-.description-container{
-    width: 25vw;
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-    text-align: left;
-    margin: 0 0 0 2vw;
+/* HEADLINE */
+.itemsheadline-container > h1 {
+  font-weight: 600;
+  line-height: 1.15;
+  padding: 0 1rem;
+  font-size: clamp(1.8rem, 3vw + 1rem, 3.8rem); 
+  /*CLAMP:
+     - mínimo: 1.8rem (mobile)
+     - valor fluído: 3vw + 1rem (laptops)
+     - máximo: 3.8rem (telas grandes) */
+}
+
+/* + 5 ANOS */
+.extrainfo-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Texto */
+.description-container {
+  flex: 1;
+  min-width: 240px;
+  max-width: 370px;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  text-align: left;
+}
+
+.description-container img {
+  width: 35px;
+  margin-bottom: 0.4rem;
+}
+
+/* 5 anos */
+.years-container {
+  flex: 1;
+  min-width: 180px;
+  max-width: 230px;
+  text-align: right;
+}
+
+.years-container img {
+  width: 90px;
+  margin-bottom: 0.5rem;
+}
+
+.years-container h3 {
+  font-size: clamp(1.6rem, 2vw + 0.6rem, 2.4rem);
+  font-weight: 600;
+}
+
+.years-container p {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
 }
 
 
-.description-container > img{
-    max-width: 6%;
-}
+/* ============================= */
+/* RESPONSIVIDADE EXTRA          */
+/* ============================= */
 
-
-.hello-container{
-    background-color: rgba(255, 255, 255, 0.164); 
-    height: 4vh;
-    width: 13vw;
-
-    display: flex;
+/* Tablets e notebooks pequenos */
+@media (max-width: 1024px) {
+  .extrainfo-container {
     justify-content: center;
-    align-items: center;
-    border: 1px solid #fff;
-    border-radius: 20px;
+    text-align: center;
+  }
+  .description-container,
+  .years-container {
+    text-align: center;
+  }
 }
 
-.profilepic-container > img {
-  border-radius: 80%;
-  max-width: 9vh;
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.4),
-    0 0 10px rgba(255, 255, 255, 0.1);
-  transform: scale(1); /* tamanho normal */
-  transition: all 0.3s ease; /* transição suave */
-}
-
-.profilepic-container > img:hover {
-  transform: scale(1.05); /* aumenta */
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.5),
-    0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-.years-container{
-    display: flex;
+/* Mobile */
+@media (max-width: 768px) {
+  .extrainfo-container {
     flex-direction: column;
-    text-align: right;
-    align-items: end;
-    margin: 0 2vw 0 0;
-
-}
-
-.years-container > img {
-    max-width: 40%;
-}
-
-.years-container > h3 {
-    font-size: 2.2rem;
-    font-weight: 500;
-}
-
-.years-container > p {
-    font-size: 1.1rem;
-    
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .description-container {
+    text-align: center;
+  }
+  .years-container {
+    text-align: center;
+  }
 }
 
 #aboutme{
@@ -381,6 +411,9 @@ li > a:hover {
 .container-projects{
     height: 80vh;
     margin: 20vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container-projects > h1{
@@ -415,70 +448,21 @@ li > a:hover {
 }
 
 .avatars {
-	--gap: 0.1em;
-	--avatar-size: 30em;
-	--overlap-size: 15em;
-	--hover-overlap-size: 10em; /* Best to keep lower than --avatar-size so that there is still some overlap on hover */
-	--border-size: 0.2em;
-	--num-children: 4; 
-	--num-children-1: calc(var(--num-children) - 1);
-
-	background: var(--color-avatars-background);
-	
-	
-	display: grid;
-	gap: var(--gap);
-	margin: 0 auto;
-  height: 25vh;
-	
-	
-	grid-auto-flow: column;
-	grid-template-columns: repeat(var(--num-children), var(--grid-cell-size-to-use));
-/* 	grid-auto-columns: var(--grid-cell-size-to-use); */
-	width: 50vw;
-	transition: all ease-in-out 0.25s;
-
-	border: calc(var(--border-size) / 2) solid rgb(0 0 0 / 0.3);
-}
-
-.avatars {
-	--grid-cell-size-to-use: var(--overlap-size);
+  height: 20vh;
+  width: 60vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .avatars > a > img{
-  width: 100px;
+  width: 15vw;
+  margin: 0 1vw 0 1vw;
 }
 
 
-
-
-.avatars > * {
-	width: var(--avatar-size);
-	aspect-ratio: 1;
-	height: auto;
-	
-	
-	outline: none;
-}
-
-.avatars img {
-	width: 100%;
-	height: auto;
-	
-	--border-color: var(--color-core-primary);
-	outline: var(--border-size) solid var(--border-color);
-	outline-offset: calc(var(--border-size) * -2 + 1px); /* 1px extra to cater for rounding errors */
-	
-	border: var(--border-size) solid var(--color-avatars-background);
-	
-	
-	transition: all ease-in-out 0.15s;
-}
-
-.avatars :is(:hover, :focus) > img {
-	--border-color: var(--color-core-tertiary);
-	scale: 1.1;
-}
 
 
 
