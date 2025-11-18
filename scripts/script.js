@@ -57,3 +57,9 @@ const swiper = new Swiper('.blog-slider', {
   },
 });
 
+function baixar() {
+    const link = document.createElement("a");
+    link.href = "arquivos/cvJuliaPaz.pdf";
+    link.download = "curriculoJuliaPazEsilva.pdf";
+    link.click();
+}
