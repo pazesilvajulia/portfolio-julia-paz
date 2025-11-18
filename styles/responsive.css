@@ -135,8 +135,18 @@
    --------------------------- */
 @media (min-width:1025px) and (max-width:1440px) {
 
-  header{ width:60vw; top:2.5rem; height:9vh; }
-  #nav-menu{ gap:5.5vw; font-size:1.02rem; display:flex; }
+  header{ 
+    width:65vw; 
+    top:2.5rem; 
+    height:9vh; 
+    left: 18%;
+  }
+
+  #nav-menu{ 
+    gap:5.5vw; 
+    font-size:1.02rem; 
+    display:flex; 
+  }
 
   .itemsheadline-container{ max-width:820px; margin-top:10vh; }
   .itemsheadline-container > h1{ font-size: clamp(2.6rem, 2.6vw + .8rem, 3.4rem); }
@@ -145,16 +155,43 @@
   .description-container{ max-width:360px; text-align:left; }
   .years-container{ max-width:240px; text-align:right; }
 
-  .container-about{ display:flex; flex-direction:row; justify-content:space-between; align-items:center; padding-top:17vh; }
-  .container-left{ width:28vw; margin-left:18vw; }
-  .container-right{ width:30vw; margin-right:18vw; }
+  .container-about{ 
+    display:flex; 
+    flex-direction:row; 
+    justify-content:space-between; 
+    padding-top:17vh; 
+  }
+  .container-left{ 
+    width:28vw; 
+    margin-left:18vw; 
+  }
+  .container-right{ 
+    width:30vw; 
+    margin-right:18vw; 
+    height: 65vh;
+
+  }
+
+  .container-right > img{
+    height: 50%;
+    width: auto;
+  
+  }
 
   .container-degrees{ width:25vw; height:35vh; }
   .container-left > h1{ font-size:3rem; }
 
   .container-projects > p{ width:60vw; }
-  .avatars{ width:60vw; }
-  .avatars > a > img{ width:15vw; max-width:160px; }
+  .container-projects > h1{ padding-top: 10vh; }
+  .avatars{ 
+    width:75vw; 
+    gap: 2vw;
+  }
+
+  .avatars > a > img{ 
+    width:50vw; 
+    max-width:300px; 
+  }
 }
 
 /* ---------------------------
