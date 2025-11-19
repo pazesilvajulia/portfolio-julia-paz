@@ -112,6 +112,15 @@
 
   /* small tweaks */
   .container-degrees{ width:95%; height:auto; border-radius:14px; padding:.8rem; }
+
+  .footer-container{
+    height: 38vh;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .footer-container > a > img{
+    width: 35px;
+  }
 }
 
 /* ---------------------------
@@ -205,6 +214,15 @@
 
   .container-left > h1{ font-size:2.3rem; }
   .container-left > p{ font-size:1.05rem; }
+
+  .footer-container{
+    height: 35vh;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .footer-container > a > img{
+    width: 35px;
+  }
 }
 
 /* ---------------------------
